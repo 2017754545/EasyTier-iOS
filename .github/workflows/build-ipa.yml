@@ -72,12 +72,20 @@ jobs:
         run: |
           set -euo pipefail
 
+          # 镜像通常自带 rustup（在 PATH 里），此时 ~/.cargo/env 并不存在，
+          # 只在文件存在时才 source，避免 set -e 直接退出。
+          if [ -f "${HOME}/.cargo/env" ]; then
+            # shellcheck disable=SC1091
+            . "${HOME}/.cargo/env"
+          fi
+
           if ! command -v rustup >/dev/null 2>&1; then
             curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs \
               | sh -s -- -y --profile minimal -t aarch64-apple-ios
+            # shellcheck disable=SC1091
+            . "${HOME}/.cargo/env"
           fi
-          # shellcheck disable=SC1091
-          . "${HOME}/.cargo/env"
+
           rustup target add aarch64-apple-ios
 
           if ! command -v protoc >/dev/null 2>&1; then
