@@ -1,0 +1,1133 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0526D7992F1762C300968CE2 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 0526D7822F1762C300968CE2 /* Localizable.xcstrings */; };
+		0526D7B32F17656B00968CE2 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 0526D7822F1762C300968CE2 /* Localizable.xcstrings */; };
+		0526D84A2F17D9AA00968CE2 /* libEasyTierShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0526D8422F17D98E00968CE2 /* libEasyTierShared.a */; };
+		0526D84B2F17E55300968CE2 /* libEasyTierShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0526D8422F17D98E00968CE2 /* libEasyTierShared.a */; };
+		055836312F04D26700139811 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 055836302F04D26700139811 /* NetworkExtension.framework */; };
+		055836392F04D26700139811 /* EasyTierNetworkExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0558362E2F04D26600139811 /* EasyTierNetworkExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		059A7D6A2F9C966E001778FC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 059A7D692F9C966E001778FC /* SystemConfiguration.framework */; };
+		05B61F5C2F05056D00646DDC /* libeasytier_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B61F5B2F05056D00646DDC /* libeasytier_ios.a */; };
+		05B6235C2F08098100646DDC /* TOMLKit in Frameworks */ = {isa = PBXBuildFile; productRef = 05B6235B2F08098100646DDC /* TOMLKit */; };
+		05CF11DA2F1A589D00E6EDF1 /* libEasyTierShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0526D8422F17D98E00968CE2 /* libEasyTierShared.a */; };
+		7A59B81B2F1641100069728D /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A59B81A2F1641100069728D /* WidgetKit.framework */; };
+		7A59B81D2F1641100069728D /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A59B81C2F1641100069728D /* SwiftUI.framework */; };
+		7A59B82E2F1641110069728D /* EasyTierWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 7A59B8192F1641100069728D /* EasyTierWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0526D84C2F17E55300968CE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 051C6A032F03AB0000AF29B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0526D8412F17D98E00968CE2;
+			remoteInfo = EasyTierShared;
+		};
+		055836372F04D26700139811 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 051C6A032F03AB0000AF29B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0558362D2F04D26600139811;
+			remoteInfo = NetworkExtension;
+		};
+		05CF11DB2F1A589D00E6EDF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 051C6A032F03AB0000AF29B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0526D8412F17D98E00968CE2;
+			remoteInfo = EasyTierShared;
+		};
+		7A59B82C2F1641110069728D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 051C6A032F03AB0000AF29B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7A59B8182F1641100069728D;
+			remoteInfo = ControlWidgetsExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0526D8402F17D98E00968CE2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0558363E2F04D26700139811 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7A59B82E2F1641110069728D /* EasyTierWidgetExtension.appex in Embed Foundation Extensions */,
+				055836392F04D26700139811 /* EasyTierNetworkExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		051C6A0B2F03AB0000AF29B1 /* EasyTier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyTier.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0526D7822F1762C300968CE2 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		0526D8422F17D98E00968CE2 /* libEasyTierShared.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEasyTierShared.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0558362E2F04D26600139811 /* EasyTierNetworkExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EasyTierNetworkExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		055836302F04D26700139811 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		058E57A42F20AFD800BE84F9 /* lib.rs */ = {isa = PBXFileReference; lastKnownFileType = text; path = lib.rs; sourceTree = "<group>"; };
+		058EB1C12F20AFD800BE84F9 /* Cargo.toml */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cargo.toml; sourceTree = "<group>"; };
+		059A7D692F9C966E001778FC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.4.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		05B61F5B2F05056D00646DDC /* libeasytier_ios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libeasytier_ios.a; sourceTree = "<group>"; };
+		7A59B8192F1641100069728D /* EasyTierWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EasyTierWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A59B81A2F1641100069728D /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		7A59B81C2F1641100069728D /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		0558363A2F04D26700139811 /* Exceptions for "EasyTierNetworkExtension" folder in "EasyTierNetworkExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 0558362D2F04D26600139811 /* EasyTierNetworkExtension */;
+		};
+		058FD0B82F1111A200580896 /* Exceptions for "EasyTier" folder in "EasyTier" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 051C6A0A2F03AB0000AF29B1 /* EasyTier */;
+		};
+		7A59B8322F1641110069728D /* Exceptions for "EasyTierWidgetExtension" folder in "EasyTierWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 7A59B8182F1641100069728D /* EasyTierWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		051C6A0D2F03AB0000AF29B1 /* EasyTier */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				058FD0B82F1111A200580896 /* Exceptions for "EasyTier" folder in "EasyTier" target */,
+			);
+			path = EasyTier;
+			sourceTree = "<group>";
+		};
+		0526D8432F17D98E00968CE2 /* EasyTierShared */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = EasyTierShared;
+			sourceTree = "<group>";
+		};
+		055836322F04D26700139811 /* EasyTierNetworkExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				0558363A2F04D26700139811 /* Exceptions for "EasyTierNetworkExtension" folder in "EasyTierNetworkExtension" target */,
+			);
+			path = EasyTierNetworkExtension;
+			sourceTree = "<group>";
+		};
+		7A59B81E2F1641100069728D /* EasyTierWidgetExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				7A59B8322F1641110069728D /* Exceptions for "EasyTierWidgetExtension" folder in "EasyTierWidgetExtension" target */,
+			);
+			path = EasyTierWidgetExtension;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		051C6A082F03AB0000AF29B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0526D84A2F17D9AA00968CE2 /* libEasyTierShared.a in Frameworks */,
+				05B6235C2F08098100646DDC /* TOMLKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0526D83F2F17D98E00968CE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0558362B2F04D26600139811 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05B61F5C2F05056D00646DDC /* libeasytier_ios.a in Frameworks */,
+				0526D84B2F17E55300968CE2 /* libEasyTierShared.a in Frameworks */,
+				055836312F04D26700139811 /* NetworkExtension.framework in Frameworks */,
+				059A7D6A2F9C966E001778FC /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A59B8162F1641100069728D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A59B81D2F1641100069728D /* SwiftUI.framework in Frameworks */,
+				05CF11DA2F1A589D00E6EDF1 /* libEasyTierShared.a in Frameworks */,
+				7A59B81B2F1641100069728D /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		051C6A022F03AB0000AF29B1 = {
+			isa = PBXGroup;
+			children = (
+				058EB1C22F20AFD800BE84F9 /* Core */,
+				051C6A0D2F03AB0000AF29B1 /* EasyTier */,
+				055836322F04D26700139811 /* EasyTierNetworkExtension */,
+				7A59B81E2F1641100069728D /* EasyTierWidgetExtension */,
+				0526D8432F17D98E00968CE2 /* EasyTierShared */,
+				0558362F2F04D26700139811 /* Frameworks */,
+				0526D7822F1762C300968CE2 /* Localizable.xcstrings */,
+				051C6A0C2F03AB0000AF29B1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		051C6A0C2F03AB0000AF29B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				051C6A0B2F03AB0000AF29B1 /* EasyTier.app */,
+				0558362E2F04D26600139811 /* EasyTierNetworkExtension.appex */,
+				7A59B8192F1641100069728D /* EasyTierWidgetExtension.appex */,
+				0526D8422F17D98E00968CE2 /* libEasyTierShared.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0558362F2F04D26700139811 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				059A7D692F9C966E001778FC /* SystemConfiguration.framework */,
+				05B61F5B2F05056D00646DDC /* libeasytier_ios.a */,
+				055836302F04D26700139811 /* NetworkExtension.framework */,
+				7A59B81A2F1641100069728D /* WidgetKit.framework */,
+				7A59B81C2F1641100069728D /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		058E57A52F20AFD800BE84F9 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				058E57A42F20AFD800BE84F9 /* lib.rs */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		058EB1C22F20AFD800BE84F9 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				058E57A52F20AFD800BE84F9 /* src */,
+				058EB1C12F20AFD800BE84F9 /* Cargo.toml */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		051C6A0A2F03AB0000AF29B1 /* EasyTier */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 051C6A162F03AB0200AF29B1 /* Build configuration list for PBXNativeTarget "EasyTier" */;
+			buildPhases = (
+				051C6A072F03AB0000AF29B1 /* Sources */,
+				051C6A082F03AB0000AF29B1 /* Frameworks */,
+				051C6A092F03AB0000AF29B1 /* Resources */,
+				0558363E2F04D26700139811 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				055836382F04D26700139811 /* PBXTargetDependency */,
+				7A59B82D2F1641110069728D /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				051C6A0D2F03AB0000AF29B1 /* EasyTier */,
+			);
+			name = EasyTier;
+			packageProductDependencies = (
+				05B6235B2F08098100646DDC /* TOMLKit */,
+			);
+			productName = EasyTier;
+			productReference = 051C6A0B2F03AB0000AF29B1 /* EasyTier.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0526D8412F17D98E00968CE2 /* EasyTierShared */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0526D8462F17D98E00968CE2 /* Build configuration list for PBXNativeTarget "EasyTierShared" */;
+			buildPhases = (
+				0526D83E2F17D98E00968CE2 /* Sources */,
+				0526D83F2F17D98E00968CE2 /* Frameworks */,
+				0526D8402F17D98E00968CE2 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				0526D8432F17D98E00968CE2 /* EasyTierShared */,
+			);
+			name = EasyTierShared;
+			packageProductDependencies = (
+			);
+			productName = EasyTierShared;
+			productReference = 0526D8422F17D98E00968CE2 /* libEasyTierShared.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		0558362D2F04D26600139811 /* EasyTierNetworkExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0558363B2F04D26700139811 /* Build configuration list for PBXNativeTarget "EasyTierNetworkExtension" */;
+			buildPhases = (
+				05B61F3E2F04D57D00646DDC /* Build EasyTier Core */,
+				0558362A2F04D26600139811 /* Sources */,
+				0558362B2F04D26600139811 /* Frameworks */,
+				0558362C2F04D26600139811 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0526D84D2F17E55300968CE2 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				055836322F04D26700139811 /* EasyTierNetworkExtension */,
+			);
+			name = EasyTierNetworkExtension;
+			packageProductDependencies = (
+			);
+			productName = NetworkExtension;
+			productReference = 0558362E2F04D26600139811 /* EasyTierNetworkExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		7A59B8182F1641100069728D /* EasyTierWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A59B8312F1641110069728D /* Build configuration list for PBXNativeTarget "EasyTierWidgetExtension" */;
+			buildPhases = (
+				7A59B8152F1641100069728D /* Sources */,
+				7A59B8162F1641100069728D /* Frameworks */,
+				7A59B8172F1641100069728D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05CF11DC2F1A589D00E6EDF1 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				7A59B81E2F1641100069728D /* EasyTierWidgetExtension */,
+			);
+			name = EasyTierWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = ControlWidgetsExtension;
+			productReference = 7A59B8192F1641100069728D /* EasyTierWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		051C6A032F03AB0000AF29B1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2620;
+				LastUpgradeCheck = 2660;
+				TargetAttributes = {
+					051C6A0A2F03AB0000AF29B1 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					0526D8412F17D98E00968CE2 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					0558362D2F04D26600139811 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					7A59B8182F1641100069728D = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 051C6A062F03AB0000AF29B1 /* Build configuration list for PBXProject "EasyTier" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 051C6A022F03AB0000AF29B1;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				05B6235A2F08098100646DDC /* XCRemoteSwiftPackageReference "TOMLKit" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 051C6A0C2F03AB0000AF29B1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				051C6A0A2F03AB0000AF29B1 /* EasyTier */,
+				0558362D2F04D26600139811 /* EasyTierNetworkExtension */,
+				7A59B8182F1641100069728D /* EasyTierWidgetExtension */,
+				0526D8412F17D98E00968CE2 /* EasyTierShared */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		051C6A092F03AB0000AF29B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0526D7992F1762C300968CE2 /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0558362C2F04D26600139811 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A59B8172F1641100069728D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0526D7B32F17656B00968CE2 /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05B61F3E2F04D57D00646DDC /* Build EasyTier Core */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build EasyTier Core";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = ". \"$HOME/.cargo/env\"\nPATH=\"${HOME}/.local/bin:${PATH}\"\nif [ -f \"/opt/homebrew/bin/brew\" ]; then\n    eval \"$(/opt/homebrew/bin/brew shellenv)\"\nfi\n\ncd \"${PROJECT_DIR}/Core\"\n\nfor ARCH in ${ARCHS}\ndo\n    case \"${ARCH}\" in\n        \"arm64\")\n            PREFIX=\"aarch64\"\n            ;;\n        \"x86_64\")\n            PREFIX=\"x86_64\"\n            ;;\n        *)\n            echo \"Unknown arch: ${ARCHS}\"\n            exit -1\n            ;;\n    esac\n\n    case \"${PLATFORM_NAME}\" in\n        \"iphoneos\")\n            TARGET=\"$PREFIX-apple-ios\"\n            ;;\n        \"iphonesimulator\")\n            TARGET=\"$PREFIX-apple-ios-sim\"\n            ;;\n        \"macosx\")\n            TARGET=\"$PREFIX-apple-darwin\"\n            ;;\n        *)\n            echo \"Unknown platform: ${PLATFORM_NAME}\"\n            exit -1\n            ;;\n    esac\n\n    if [ \"${CONFIGURATION}\" = \"Debug\" ]; then\n        cargo build --target $TARGET\n    else\n        cargo build --target $TARGET --release\n    fi\ndone\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		051C6A072F03AB0000AF29B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0526D83E2F17D98E00968CE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0558362A2F04D26600139811 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A59B8152F1641100069728D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0526D84D2F17E55300968CE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0526D8412F17D98E00968CE2 /* EasyTierShared */;
+			targetProxy = 0526D84C2F17E55300968CE2 /* PBXContainerItemProxy */;
+		};
+		055836382F04D26700139811 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0558362D2F04D26600139811 /* EasyTierNetworkExtension */;
+			targetProxy = 055836372F04D26700139811 /* PBXContainerItemProxy */;
+		};
+		05CF11DC2F1A589D00E6EDF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0526D8412F17D98E00968CE2 /* EasyTierShared */;
+			targetProxy = 05CF11DB2F1A589D00E6EDF1 /* PBXContainerItemProxy */;
+		};
+		7A59B82D2F1641110069728D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7A59B8182F1641100069728D /* EasyTierWidgetExtension */;
+			targetProxy = 7A59B82C2F1641110069728D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		051C6A142F03AB0200AF29B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		051C6A152F03AB0200AF29B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		051C6A172F03AB0200AF29B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EasyTier/EasyTier.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 10;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				ENABLE_USER_SELECTED_FILES = readwrite;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EasyTier/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = EasyTier;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "EasyTier uses this permission to peer with local devices.";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.2.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bg5ipl.easytier;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		051C6A182F03AB0200AF29B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EasyTier/EasyTier.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 10;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				ENABLE_USER_SELECTED_FILES = readwrite;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EasyTier/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = EasyTier;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "EasyTier uses this permission to peer with local devices.";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.2.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bg5ipl.easytier;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0526D8472F17D98E00968CE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0526D8482F17D98E00968CE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0558363C2F04D26700139811 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = EasyTierNetworkExtension/EasyTierNetworkExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 10;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/EasyTierNetworkExtension";
+				INFOPLIST_FILE = EasyTierNetworkExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = EasyTierNetworkExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*][arch=arm64]" = (
+					"$(inherited)",
+					"${PROJECT_DIR}/Core/target/aarch64-apple-ios/debug",
+				);
+				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*][arch=x86_64]" = (
+					"$(inherited)",
+					"${PROJECT_DIR}/Core/target/x86_64-apple-ios/debug",
+				);
+				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*][arch=arm64]" = (
+					"$(inherited)",
+					"${PROJECT_DIR}/Core/target/aarch64-apple-ios-sim/debug",
+				);
+				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*][arch=x86_64]" = (
+					"$(inherited)",
+					"${PROJECT_DIR}/Core/target/x86_64-apple-ios-sim/debug",
+				);
+				"LIBRARY_SEARCH_PATHS[sdk=macosx*][arch=arm64]" = (
+					"$(inherited)",
+					"${PROJECT_DIR}/Core/target/aarch64-apple-darwin/debug",
+				);
+				"LIBRARY_SEARCH_PATHS[sdk=macosx*][arch=x86_64]" = (
+					"$(inherited)",
+					"${PROJECT_DIR}/Core/target/x86_64-apple-darwin/debug",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.2.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bg5ipl.easytier.tunnel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_DIR}/$(SWIFT_MODULE_NAME)/$(SWIFT_MODULE_NAME)-Bridging-Header.h";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0558363D2F04D26700139811 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = EasyTierNetworkExtension/EasyTierNetworkExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 10;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/EasyTierNetworkExtension";
+				INFOPLIST_FILE = EasyTierNetworkExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = EasyTierNetworkExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*][arch=arm64]" = (
+					"$(inherited)",
+					"${PROJECT_DIR}/Core/target/aarch64-apple-ios/release",
+				);
+				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*][arch=x86_64]" = (
+					"$(inherited)",
+					"${PROJECT_DIR}/Core/target/x86_64-apple-ios/release",
+				);
+				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*][arch=arm64]" = (
+					"$(inherited)",
+					"${PROJECT_DIR}/Core/target/aarch64-apple-ios-sim/release",
+				);
+				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*][arch=x86_64]" = (
+					"$(inherited)",
+					"${PROJECT_DIR}/Core/target/x86_64-apple-ios-sim/release",
+				);
+				"LIBRARY_SEARCH_PATHS[sdk=macosx*][arch=arm64]" = (
+					"$(inherited)",
+					"${PROJECT_DIR}/Core/target/aarch64-apple-darwin/release",
+				);
+				"LIBRARY_SEARCH_PATHS[sdk=macosx*][arch=x86_64]" = (
+					"$(inherited)",
+					"${PROJECT_DIR}/Core/target/x86_64-apple-darwin/release",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.2.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bg5ipl.easytier.tunnel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_DIR}/$(SWIFT_MODULE_NAME)/$(SWIFT_MODULE_NAME)-Bridging-Header.h";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7A59B82F2F1641110069728D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = EasyTierWidgetExtension/EasyTierWidgetExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 10;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EasyTierWidgetExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = EasyTierWidgetExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.2.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bg5ipl.easytier.widgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7A59B8302F1641110069728D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = EasyTierWidgetExtension/EasyTierWidgetExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 10;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EasyTierWidgetExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = EasyTierWidgetExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.2.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bg5ipl.easytier.widgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		051C6A062F03AB0000AF29B1 /* Build configuration list for PBXProject "EasyTier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				051C6A142F03AB0200AF29B1 /* Debug */,
+				051C6A152F03AB0200AF29B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		051C6A162F03AB0200AF29B1 /* Build configuration list for PBXNativeTarget "EasyTier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				051C6A172F03AB0200AF29B1 /* Debug */,
+				051C6A182F03AB0200AF29B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0526D8462F17D98E00968CE2 /* Build configuration list for PBXNativeTarget "EasyTierShared" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0526D8472F17D98E00968CE2 /* Debug */,
+				0526D8482F17D98E00968CE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0558363B2F04D26700139811 /* Build configuration list for PBXNativeTarget "EasyTierNetworkExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0558363C2F04D26700139811 /* Debug */,
+				0558363D2F04D26700139811 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A59B8312F1641110069728D /* Build configuration list for PBXNativeTarget "EasyTierWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A59B82F2F1641110069728D /* Debug */,
+				7A59B8302F1641110069728D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		05B6235A2F08098100646DDC /* XCRemoteSwiftPackageReference "TOMLKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/LebJe/TOMLKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		05B6235B2F08098100646DDC /* TOMLKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05B6235A2F08098100646DDC /* XCRemoteSwiftPackageReference "TOMLKit" */;
+			productName = TOMLKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 051C6A032F03AB0000AF29B1 /* Project object */;
+}

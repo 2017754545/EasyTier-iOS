@@ -1,0 +1,206 @@
+name: Build Unsigned IPA
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "**/*.md"
+  workflow_dispatch:
+    inputs:
+      xcode_version:
+        description: "Xcode 版本目录名（如 27.0 / 27.1）"
+        required: false
+        default: "27.0"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ipa-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  SCHEME: EasyTier
+  BUILD_CONFIGURATION: Release
+  IPA_NAME: EasyTier-unsigned.ipa
+
+jobs:
+  build:
+    name: Build unsigned IPA with iOS 27 SDK
+    runs-on: xcode-27
+    timeout-minutes: 90
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Select Xcode toolchain
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          REQUESTED="${{ github.event.inputs.xcode_version || '27.0' }}"
+          echo "Requested Xcode: ${REQUESTED}"
+          ls -1 /Applications | grep -i '^Xcode' || true
+
+          if [ -d "/Applications/Xcode_${REQUESTED}.app" ]; then
+            TARGET="/Applications/Xcode_${REQUESTED}.app"
+          else
+            TARGET="$(ls -d /Applications/Xcode_27*.app 2>/dev/null | sort -V | tail -1)"
+          fi
+
+          if [ -z "${TARGET}" ]; then
+            echo "::error::没有找到 Xcode 27，当前镜像不含 iOS 27 SDK"
+            exit 1
+          fi
+
+          echo "Using ${TARGET}"
+          sudo xcode-select --switch "${TARGET}/Contents/Developer"
+          xcodebuild -version
+          xcodebuild -showsdks | grep -i -E 'ios|iphoneos' || true
+
+          SDK_VERSION="$(xcrun --sdk iphoneos --show-sdk-version)"
+          echo "IPHONEOS_SDK_VERSION=${SDK_VERSION}" >> "${GITHUB_ENV}"
+          echo "iPhoneOS SDK: ${SDK_VERSION}"
+          case "${SDK_VERSION}" in
+            27.*) echo "✓ 正在用 iOS ${SDK_VERSION} SDK 编译" ;;
+            *) echo "::warning::SDK 不是 iOS 27 系列（当前 ${SDK_VERSION}）" ;;
+          esac
+
+      - name: Install build dependencies (Rust iOS target + protoc)
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if ! command -v rustup >/dev/null 2>&1; then
+            curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs \
+              | sh -s -- -y --profile minimal -t aarch64-apple-ios
+          fi
+          # shellcheck disable=SC1091
+          . "${HOME}/.cargo/env"
+          rustup target add aarch64-apple-ios
+
+          if ! command -v protoc >/dev/null 2>&1; then
+            brew install protobuf
+          fi
+
+          rustc --version
+          cargo --version
+          protoc --version
+
+      - name: Archive (no code signing)
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          ARCHIVE_PATH="${RUNNER_TEMP}/EasyTier.xcarchive"
+          echo "ARCHIVE_PATH=${ARCHIVE_PATH}" >> "${GITHUB_ENV}"
+
+          set -o pipefail
+          xcodebuild archive \
+            -project EasyTier.xcodeproj \
+            -scheme "${SCHEME}" \
+            -configuration "${BUILD_CONFIGURATION}" \
+            -destination "generic/platform=iOS" \
+            -archivePath "${ARCHIVE_PATH}" \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            AD_HOC_CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGN_IDENTITY="" \
+            DEVELOPMENT_TEAM="" \
+            CURRENT_PROJECT_VERSION="${GITHUB_RUN_NUMBER}" \
+            2>&1 | tee "${RUNNER_TEMP}/xcodebuild.log"
+
+      - name: Package unsigned IPA
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          APP_PATH="${ARCHIVE_PATH}/Products/Applications/EasyTier.app"
+          PACKAGE_PATH="${RUNNER_TEMP}/package"
+          EXPORT_PATH="${RUNNER_TEMP}/export"
+
+          test -d "${APP_PATH}" || { echo "::error::找不到 EasyTier.app"; exit 1; }
+
+          echo "== Bundle 结构 =="
+          find "${APP_PATH}" -maxdepth 2 -name "*.appex" -o -maxdepth 1 -name "Info.plist" | sort
+
+          echo "== 标识校验 =="
+          APP_ID="$(/usr/libexec/PlistBuddy -c 'Print :CFBundleIdentifier' "${APP_PATH}/Info.plist")"
+          echo "App: ${APP_ID}"
+          for APPEX in "${APP_PATH}"/PlugIns/*.appex; do
+            [ -d "${APPEX}" ] || continue
+            APPEX_ID="$(/usr/libexec/PlistBuddy -c 'Print :CFBundleIdentifier' "${APPEX}/Info.plist")"
+            echo "Appex: ${APPEX_ID}"
+          done
+
+          if find "${APP_PATH}" -name "_CodeSignature" -maxdepth 3 | grep -q .; then
+            echo "::warning::产物里出现了 _CodeSignature，可能不是纯未签名状态"
+          fi
+
+          mkdir -p "${PACKAGE_PATH}/Payload" "${EXPORT_PATH}"
+          cp -R "${APP_PATH}" "${PACKAGE_PATH}/Payload/EasyTier.app"
+
+          # 清掉可能残留的签名目录，保证是「干净未签名」产物，交给你自己的证书重签
+          find "${PACKAGE_PATH}/Payload" -name "_CodeSignature" -type d -prune -exec rm -rf {} + || true
+
+          (
+            cd "${PACKAGE_PATH}"
+            /usr/bin/zip -qry "${EXPORT_PATH}/${IPA_NAME}" Payload
+          )
+
+          shasum -a 256 "${EXPORT_PATH}/${IPA_NAME}" | tee "${EXPORT_PATH}/${IPA_NAME}.sha256"
+          du -h "${EXPORT_PATH}/${IPA_NAME}"
+          echo "EXPORT_PATH=${EXPORT_PATH}" >> "${GITHUB_ENV}"
+
+      - name: Upload IPA artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: EasyTier-unsigned-${{ github.run_number }}
+          path: |
+            ${{ runner.temp }}/export/EasyTier-unsigned.ipa
+            ${{ runner.temp }}/export/EasyTier-unsigned.ipa.sha256
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Upload build log on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: xcodebuild-log-${{ github.run_number }}
+          path: ${{ runner.temp }}/xcodebuild.log
+          if-no-files-found: ignore
+          retention-days: 7
+
+      - name: Publish rolling release asset
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          TAG="ipa-unsigned"
+          TITLE="Unsigned IPA (iOS ${IPHONEOS_SDK_VERSION} SDK)"
+          NOTES="${RUNNER_TEMP}/release-notes.md"
+
+          {
+            echo "构建：iOS ${IPHONEOS_SDK_VERSION} SDK / Xcode $(xcodebuild -version | head -1 | awk '{print $2}')"
+            echo "提交：\`${GITHUB_SHA:0:7}\`"
+            echo "运行：[#${GITHUB_RUN_NUMBER}](${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID})"
+            echo
+            echo "产物为**未签名** IPA，需要自行用个人证书 + 描述文件签名。"
+            echo "主 App 与 \`PlugIns/EasyTierNetworkExtension.appex\`、\`PlugIns/EasyTierWidgetExtension.appex\` 都要签。"
+          } > "${NOTES}"
+
+          if gh release view "${TAG}" >/dev/null 2>&1; then
+            gh release upload "${TAG}" "${EXPORT_PATH}/${IPA_NAME}" --clobber
+            gh release edit "${TAG}" --title "${TITLE}" --notes-file "${NOTES}"
+          else
+            gh release create "${TAG}" "${EXPORT_PATH}/${IPA_NAME}" \
+              --target "${GITHUB_SHA}" \
+              --title "${TITLE}" \
+              --notes-file "${NOTES}" \
+              --prerelease \
+              --latest=false
+          fi
